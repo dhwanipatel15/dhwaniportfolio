@@ -1,0 +1,41 @@
+name: Fetch Figma assets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/figma-assets.json"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download assets
+        run: |
+          mkdir -p public/projects
+          node -e '
+            const fs = require("fs");
+            const assets = JSON.parse(fs.readFileSync("scripts/figma-assets.json", "utf8"));
+            (async () => {
+              for (const [name, url] of Object.entries(assets)) {
+                const res = await fetch(url);
+                if (!res.ok) { console.error(`FAILED ${name}: ${res.status}`); process.exitCode = 1; continue; }
+                const buf = Buffer.from(await res.arrayBuffer());
+                fs.writeFileSync(`public/projects/${name}`, buf);
+                console.log(`OK ${name} (${buf.length} bytes)`);
+              }
+            })();
+          '
+
+      - name: Commit assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/projects
+          git diff --cached --quiet || git commit -m "Add Figma project assets [skip ci]"
+          git push
