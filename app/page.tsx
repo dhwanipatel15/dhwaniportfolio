@@ -7,52 +7,57 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     num: "01",
-    title: "Finlo",
-    subtitle: "Fintech budgeting app",
-    tags: ["Mobile App", "UX Research", "UI Design"],
+    title: "Transcript Integration",
+    subtitle: "Education & talent platform feature",
+    tags: ["B2B SaaS", "UX Flows", "Information Architecture"],
     description:
-      "End-to-end design of a personal finance app that turns budgeting from a chore into a habit. Led research with 40+ users, mapped the money-anxiety journey, and designed a calm, glanceable interface.",
-    metric: "+38% 90-day retention",
+      "Designed the end-to-end experience for integrating academic transcripts into a talent and education platform — mapping complex data into clean, scannable flows that work for both administrators and candidates.",
+    metric: "Shipped at Marcus Evans",
+    link: "https://www.figma.com/design/MwKb6W5LmhnuDWpxNPuyId/Transcript-Integration?m=auto&t=JLUnlQvSc8dNijpT-1",
     gradient: "from-[#ff5c39] via-[#ff8f6b] to-[#ffd0a8]",
   },
   {
     num: "02",
-    title: "Carely",
-    subtitle: "Telehealth patient portal",
-    tags: ["Web App", "Accessibility", "Design System"],
+    title: "BMT",
+    subtitle: "Internal B2B SaaS product",
+    tags: ["SaaS Dashboard", "Product Thinking", "UI Design"],
     description:
-      "Redesigned a legacy patient portal used by 200k patients. Rebuilt the appointment and prescription flows around WCAG 2.2 AA, cutting support calls and making care reachable for everyone.",
-    metric: "-41% support tickets",
+      "Owned the design of an internal business management tool from requirements to developer handoff — translating stakeholder needs across APAC, the UK and Europe into a clear, efficient interface.",
+    metric: "1 of 9 products shipped in a year",
+    link: "https://www.figma.com/design/NYOofmgdc55KfUp3TREy3Q/BMT?m=auto&t=JLUnlQvSc8dNijpT-1",
     gradient: "from-[#3ec6ff] via-[#6b8cff] to-[#b39dff]",
   },
   {
     num: "03",
-    title: "Shopstream",
-    subtitle: "Live shopping platform",
-    tags: ["E-commerce", "Interaction Design", "Prototyping"],
+    title: "Tata Finance",
+    subtitle: "Fintech app design",
+    tags: ["Fintech", "Mobile & Web", "Prototyping"],
     description:
-      "Designed a live-video shopping experience from zero to launch — real-time chat, one-tap checkout, and host tools. Prototyped in Figma and Framer, tested weekly, shipped in 12 weeks.",
-    metric: "+24% checkout conversion",
+      "Designed flows and responsive UI for a consumer finance experience — simplifying dense financial products into interfaces that build trust, from onboarding through transactions.",
+    metric: "Research → prototype → handoff",
+    link: "https://www.figma.com/design/svhOB0IcKVIEdgIlpjKLDQ/Tata-Finance--Copy-?node-id=328-7372&t=B0R4cc0HPLVYEveo-1",
     gradient: "from-[#ffd23e] via-[#ff9d3e] to-[#ff5c39]",
   },
   {
     num: "04",
-    title: "Atlas HR",
-    subtitle: "B2B SaaS design system",
-    tags: ["Design System", "SaaS Dashboard", "Figma Library"],
+    title: "Marcus Evans Design System",
+    subtitle: "Scalable component library",
+    tags: ["Design System", "Figma Library", "Dev Handoff"],
     description:
-      "Built a 120+ component design system for an HR analytics platform, unifying five inconsistent products into one language. Tokens, docs, and governance that let devs ship 2x faster.",
-    metric: "120+ components, 5 products unified",
+      "Built a scalable design system powering 9 SaaS products — tokens, components and documentation that improved UI consistency, sped up design production and made developer handoffs smoother.",
+    metric: "Powers 9 shipped products",
+    link: null,
     gradient: "from-[#6bffb8] via-[#3ec6ff] to-[#2b6bff]",
   },
   {
     num: "05",
-    title: "Wander",
-    subtitle: "Travel planning app concept",
-    tags: ["Brand Identity", "Product Design", "Motion"],
+    title: "Events Platform Suite",
+    subtitle: "B2B & B2C events SaaS",
+    tags: ["Events", "B2B/B2C", "Global Rollout"],
     description:
-      "A concept app that plans trips around moods, not checklists. Owned everything from brand identity and motion language to the swipe-to-itinerary interaction that made it feel like play.",
-    metric: "Featured on design showcases",
+      "Designed event management and attendee experiences across internal and external products — partnering with senior leadership and cross-functional teams to support global product rollouts.",
+    metric: "Rolled out across 3 regions",
+    link: null,
     gradient: "from-[#ff6bcb] via-[#b39dff] to-[#3ec6ff]",
   },
 ];
@@ -60,39 +65,39 @@ const projects = [
 const strengths = [
   {
     num: "01",
-    title: "Research that digs deeper",
-    body: "I start with people, not pixels. Interviews, usability tests and journey maps that uncover what users actually need — not what they say they want.",
+    title: "Ship, don't just concept",
+    body: "13 software products designed and shipped in 1.5 years — across SaaS, events, talent, education, AI, fintech, cybersecurity and fraud management.",
   },
   {
     num: "02",
     title: "Systems thinking",
-    body: "Every screen I design belongs to a system. Tokens, components and patterns that scale gracefully instead of collapsing under their own weight.",
+    body: "I built a scalable design system that improved UI consistency, sped up design production and made developer handoffs smoother across an entire product suite.",
   },
   {
     num: "03",
-    title: "Prototype early, test often",
-    body: "Ideas earn their place. I build interactive prototypes fast and put them in front of real users before a single line of code is written.",
+    title: "Quick adaptor",
+    body: "New domain, new constraints, new stakeholders — I get up to speed fast. From fraud management to events platforms, I've learned that curiosity beats familiarity.",
   },
   {
     num: "04",
     title: "Fluent with developers",
-    body: "I speak flexbox and API constraints. Handoffs are conversations, not PDF dumps — so what ships looks like what was designed.",
+    body: "I collaborate with developers on information architecture, user flows and feature prioritisation — so what ships looks like what was designed.",
   },
   {
     num: "05",
-    title: "Motion with meaning",
-    body: "Animation isn't decoration. I use motion to explain hierarchy, guide attention and give products a personality users remember.",
+    title: "Executive communication",
+    body: "9+ executive-level presentations and product documentation that supported decision-making, stakeholder alignment and roadmap communication.",
   },
   {
     num: "06",
-    title: "Business-aware design",
-    body: "Beautiful is not enough. Every design decision I make maps to a metric — retention, conversion, support load — so design earns its seat at the table.",
+    title: "Craft compounds",
+    body: "My approach is grounded in one belief: consistent obsession with quality compounds faster than talent alone.",
   },
 ];
 
 const tools = [
-  "Figma", "Framer", "Protopie", "Webflow", "Adobe CC", "Blender",
-  "Maze", "Notion", "Miro", "After Effects", "Lottie", "Spline",
+  "Figma", "Framer", "FigJam", "Illustrator", "Photoshop", "InDesign",
+  "Notion", "Canva", "Veo 3", "Claude", "Gemini", "Google Sheets",
 ];
 
 /* ---------------- hooks ---------------- */
@@ -197,8 +202,9 @@ function Hero() {
       </h1>
       <p className="hero-word relative z-10 mt-8 max-w-xl text-lg text-cream/70 md:text-xl">
         <span style={{ animationDelay: "0.8s" }}>
-          I&apos;m Dhwani Patel, a product &amp; UI/UX designer. Let&apos;s make
-          something unforgettable instead.
+          I&apos;m Dhwani Patel, a product designer in Mumbai — 13 products
+          shipped in 1.5 years. Let&apos;s make something unforgettable
+          instead.
         </span>
       </p>
       <a
@@ -224,12 +230,14 @@ function Statement() {
         <div className="mt-12 grid gap-10 md:grid-cols-2">
           <p className="reveal reveal-delay-1 text-xl leading-relaxed text-ink/70">
             Great products don&apos;t come from UI kits and trend-chasing alone.
-            They come from understanding people — their habits, fears and the
-            jobs they hire your product to do.
+            In 1.5 years I&apos;ve designed and shipped 13 software products
+            across SaaS, events, talent, education, AI, fintech, cybersecurity
+            and fraud management.
           </p>
           <p className="reveal reveal-delay-2 text-xl leading-relaxed text-ink/70">
-            Product success requires a shift in how teams think about design:
-            from decoration at the end, to strategy from the start. That&apos;s
+            What made them work wasn&apos;t decoration at the end — it was
+            product thinking from the start: UX flows, design systems,
+            stakeholder collaboration and craft-driven execution. That&apos;s
             where I come in.
           </p>
         </div>
@@ -366,8 +374,11 @@ function Work() {
 
         <div className="mt-24 flex flex-col gap-28">
           {projects.map((p, i) => (
-            <article
+            <a
               key={p.num}
+              href={p.link ?? "#contact"}
+              target={p.link ? "_blank" : undefined}
+              rel={p.link ? "noopener noreferrer" : undefined}
               className={`project-card reveal group grid cursor-pointer items-center gap-10 md:grid-cols-2 ${
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
@@ -403,8 +414,13 @@ function Work() {
                 <p className="mt-6 font-mono text-sm text-cream/80">
                   → {p.metric}
                 </p>
+                {p.link && (
+                  <p className="mt-3 font-mono text-xs text-accent/80">
+                    View in Figma ↗
+                  </p>
+                )}
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
@@ -453,7 +469,7 @@ function Footer() {
               dhwani<span className="text-accent">.</span>
             </p>
             <p className="mt-2 text-sm text-cream/50">
-              Product &amp; UI/UX Designer
+              Product Designer — Mumbai, India
             </p>
           </div>
           <ul className="flex flex-wrap gap-6 text-sm text-cream/60">
