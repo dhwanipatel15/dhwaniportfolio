@@ -94,6 +94,19 @@ body {
 .marquee-track:hover {
   animation-play-state: paused;
 }
+.marquee-slow {
+  animation-duration: 60s;
+}
+
+/* ---- Shot reel ---- */
+.shot-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s ease;
+}
+.shot-card:hover {
+  transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 20px 60px rgba(255, 92, 57, 0.25);
+}
 
 /* ---- Numbered list rows ---- */
 .why-row {

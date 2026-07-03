@@ -7,58 +7,63 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     num: "01",
-    title: "Transcript Integration",
-    subtitle: "Education & talent platform feature",
-    tags: ["B2B SaaS", "UX Flows", "Information Architecture"],
+    title: "BookMyTicket",
+    subtitle: "Flight booking — B2B agent console & B2C app",
+    tags: ["Travel", "B2B/B2C", "Web & Mobile"],
     description:
-      "Designed the end-to-end experience for integrating academic transcripts into a talent and education platform — mapping complex data into clean, scannable flows that work for both administrators and candidates.",
-    metric: "Shipped at Marcus Evans",
-    link: "https://www.figma.com/design/MwKb6W5LmhnuDWpxNPuyId/Transcript-Integration?m=auto&t=JLUnlQvSc8dNijpT-1",
-    gradient: "from-[#ff5c39] via-[#ff8f6b] to-[#ffd0a8]",
+      "End-to-end design of a flight booking platform: agent dashboards with one-way, round-trip and multi-city search, seat & meal selection and payments — plus a consumer web and mobile app, brand identity and full guidelines.",
+    metric: "Brand → low-fi → shipped UI",
+    link: "https://www.figma.com/design/NYOofmgdc55KfUp3TREy3Q/BMT?m=auto&t=JLUnlQvSc8dNijpT-1",
+    images: ["/projects/bmt-landing.jpg", "/projects/bmt-results.jpg"],
+    gradient: "from-[#1a3a24] via-[#2e5c3a] to-[#6bffb8]",
   },
   {
     num: "02",
-    title: "BMT",
-    subtitle: "Internal B2B SaaS product",
-    tags: ["SaaS Dashboard", "Product Thinking", "UI Design"],
+    title: "Linguarama Connect",
+    subtitle: "English Pathway — language learning platform",
+    tags: ["EdTech", "B2C Web App", "UX Flows"],
     description:
-      "Owned the design of an internal business management tool from requirements to developer handoff — translating stakeholder needs across APAC, the UK and Europe into a clear, efficient interface.",
-    metric: "1 of 9 products shipped in a year",
-    link: "https://www.figma.com/design/NYOofmgdc55KfUp3TREy3Q/BMT?m=auto&t=JLUnlQvSc8dNijpT-1",
+      "Designed the learner experience for a language-learning platform: homepage, flashcards, test modules, webinars, statistics and achievement badges — balancing motivation mechanics with a calm, focused study environment.",
+    metric: "9 modules designed end-to-end",
+    link: "https://www.figma.com/design/qv5jpm2gaU9Pppf38BPkWN/English-Pathway---Linguarama-Connect?m=auto&t=JnqATZRKVu49oAbi-6",
+    images: ["/projects/linguarama-home.jpg", "/projects/linguarama-flashcards.jpg"],
     gradient: "from-[#3ec6ff] via-[#6b8cff] to-[#b39dff]",
   },
   {
     num: "03",
     title: "Tata Finance",
-    subtitle: "Fintech app design",
-    tags: ["Fintech", "Mobile & Web", "Prototyping"],
+    subtitle: "Loan verification & onboarding app",
+    tags: ["Fintech", "Mobile App", "KYC Flows"],
     description:
-      "Designed flows and responsive UI for a consumer finance experience — simplifying dense financial products into interfaces that build trust, from onboarding through transactions.",
-    metric: "Research → prototype → handoff",
+      "Designed a field-agent mobile app for loan verification — KYC, ID documents, proof of address, checks & remarks — turning a dense, error-prone paper process into guided step-by-step flows that build trust.",
+    metric: "Complex KYC → guided flows",
     link: "https://www.figma.com/design/svhOB0IcKVIEdgIlpjKLDQ/Tata-Finance--Copy-?node-id=328-7372&t=B0R4cc0HPLVYEveo-1",
+    images: ["/projects/tata-info.jpg", "/projects/tata-success.jpg"],
     gradient: "from-[#ffd23e] via-[#ff9d3e] to-[#ff5c39]",
   },
   {
     num: "04",
-    title: "Marcus Evans Design System",
-    subtitle: "Scalable component library",
-    tags: ["Design System", "Figma Library", "Dev Handoff"],
+    title: "Marcus Evans Digital Experience",
+    subtitle: "Corporate website & storytelling redesign",
+    tags: ["Web Design", "Motion & Storytelling", "Brand"],
     description:
-      "Built a scalable design system powering 9 SaaS products — tokens, components and documentation that improved UI consistency, sped up design production and made developer handoffs smoother.",
-    metric: "Powers 9 shipped products",
-    link: null,
-    gradient: "from-[#6bffb8] via-[#3ec6ff] to-[#2b6bff]",
+      "Reimagined a global events company's web presence — scroll-driven storytelling from complexity to clarity, brand-merging animation concepts, summit and event landing pages, personas and navigation systems.",
+    metric: "50+ pages of exploration → presented concepts",
+    link: "https://www.figma.com/design/i6upHXXQ2vvDsbXRw3kdOt/New-designs?node-id=1210-19727&t=0dONLrRX6tBpcvt5-11",
+    images: ["/projects/newdesigns-home.jpg", "/projects/newdesigns-hero.jpg"],
+    gradient: "from-[#ff6bcb] via-[#b39dff] to-[#3ec6ff]",
   },
   {
     num: "05",
-    title: "Events Platform Suite",
-    subtitle: "B2B & B2C events SaaS",
-    tags: ["Events", "B2B/B2C", "Global Rollout"],
+    title: "PurpleCop",
+    subtitle: "Cloud security posture management (CSPM)",
+    tags: ["Cybersecurity", "SaaS Dashboard", "Data Viz"],
     description:
-      "Designed event management and attendee experiences across internal and external products — partnering with senior leadership and cross-functional teams to support global product rollouts.",
-    metric: "Rolled out across 3 regions",
+      "Designed a cloud security platform — CSPM dashboards, analytics & reporting, policy management and the marketing website with light and dark modes — making dense security data scannable for engineers.",
+    metric: "Dashboard + app + website",
     link: null,
-    gradient: "from-[#ff6bcb] via-[#b39dff] to-[#3ec6ff]",
+    images: [],
+    gradient: "from-[#4c1d95] via-[#7c3aed] to-[#c4b5fd]",
   },
 ];
 
@@ -215,6 +220,43 @@ function Hero() {
       </a>
       <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-cream/40">
         scroll
+      </div>
+    </section>
+  );
+}
+
+function ShotReel() {
+  const shots = [
+    "/projects/bmt-cover.jpg",
+    "/projects/linguarama-home.jpg",
+    "/projects/tata-cover.jpg",
+    "/projects/newdesigns-home.jpg",
+    "/projects/bmt-landing.jpg",
+    "/projects/linguarama-cover.jpg",
+    "/projects/newdesigns-hero.jpg",
+    "/projects/tata-info.jpg",
+    "/projects/bmt-results.jpg",
+    "/projects/newdesigns-cover.jpg",
+    "/projects/linguarama-flashcards.jpg",
+    "/projects/tata-success.jpg",
+  ];
+  const row = [...shots, ...shots];
+  return (
+    <section className="overflow-hidden bg-ink py-16">
+      <div className="marquee-track marquee-slow items-center gap-6 pr-6">
+        {row.map((src, i) => (
+          <div
+            key={`${src}-${i}`}
+            className="shot-card h-52 shrink-0 overflow-hidden rounded-2xl border border-cream/10 md:h-64"
+          >
+            <img
+              src={src}
+              alt="Project design screen"
+              loading="lazy"
+              className="h-full w-auto object-cover"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -383,14 +425,33 @@ function Work() {
                 i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <div className="overflow-hidden rounded-3xl">
-                <div
-                  className={`project-thumb flex aspect-[4/3] items-center justify-center bg-gradient-to-br ${p.gradient}`}
-                >
-                  <span className="text-outline select-none text-[8rem] font-bold md:text-[10rem]">
-                    {p.num}
-                  </span>
-                </div>
+              <div className="overflow-hidden rounded-3xl border border-cream/10">
+                {p.images.length > 0 ? (
+                  <div className="project-thumb relative aspect-[4/3]">
+                    <img
+                      src={p.images[0]}
+                      alt={`${p.title} — design screen`}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover object-top"
+                    />
+                    {p.images[1] && (
+                      <img
+                        src={p.images[1]}
+                        alt={`${p.title} — second design screen`}
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                      />
+                    )}
+                  </div>
+                ) : (
+                  <div
+                    className={`project-thumb flex aspect-[4/3] items-center justify-center bg-gradient-to-br ${p.gradient}`}
+                  >
+                    <span className="text-outline select-none text-[8rem] font-bold md:text-[10rem]">
+                      {p.num}
+                    </span>
+                  </div>
+                )}
               </div>
               <div>
                 <div className="flex flex-wrap gap-2">
@@ -530,6 +591,7 @@ export default function Home() {
     <main className="w-full">
       <Nav />
       <Hero />
+      <ShotReel />
       <Statement />
       <Approach />
       <Why />
